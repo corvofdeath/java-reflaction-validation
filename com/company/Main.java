@@ -10,7 +10,7 @@ public class Main {
 	// write your code here
 
         Teste meuTeste = new Teste();
-        ValidatorResult result = Validator.validate(Teste.class, meuTeste);
+        ValidatorResult result = Validator.validate(meuTeste);
 
         System.out.println("Errors: " + result.getErrors().size());
         System.out.println("ModelState: " + result.isModelState());

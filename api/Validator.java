@@ -8,9 +8,10 @@ import java.lang.reflect.*;
 
 public class Validator {
 
-    public static ValidatorResult validate(Class type, Object object) {
+    public static ValidatorResult validate(Object object) {
         try {
 
+            Class type = object.getClass();
             ValidatorResult result = new ValidatorResult();
 
             for (Method method : type.getDeclaredMethods()) {
